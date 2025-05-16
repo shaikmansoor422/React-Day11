@@ -1,5 +1,5 @@
 import React from "react";
-import "./Counting.css"
+import "./Counter.css"
 
 class Counter extends React.Component {
     constructor() {
@@ -24,16 +24,18 @@ class Counter extends React.Component {
     render() {
 
         return (<>
-            <div id="page" style={{backgroundColor : "black"}}>
+        <h3 id="heading">Simple counter App</h3>
                 <div id="count_container">
-                    <h1 id="heading">{this.state.count}</h1>
+                    <div id="num">
+                        <h1 >{this.state.count}</h1>
+                        </div>
                     <div id="button_container">
                         <button onClick={this.incrFunc}>Incr +</button>
                         <button onClick={this.clearFunc}>Clear </button>
                         <button onClick={this.decrFunc}>Decre -</button>
                     </div>
                 </div>
-            </div>
+                
         </>)
     }
 }
